@@ -3,47 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Test TikTok Pixel</title>
+  <title>Dziękujemy</title>
 
-  <!-- TikTok Pixel base code -->
   <!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject = t;
-  var ttq = w[t] = w[t] || [];
-  ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
-  ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); }; };
-  for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-  ttq.instance = function (t) { var e = ttq._i[t] || []; for (var n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]); return e; };
-  ttq.load = function (e, n) {
-    var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-    ttq._i = ttq._i || {};
-    ttq._i[e] = [];
-    ttq._i[e]._u = i;
-    ttq._t = ttq._t || {};
-    ttq._t[e] = +new Date;
-    ttq._o = ttq._o || {};
-    ttq._o[e] = n || {};
-    var o = document.createElement("script");
-    o.type = "text/javascript";
-    o.async = !0;
-    o.src = i + "?sdkid=" + e + "&lib=" + t;
-    var a = document.getElementsByTagName("script")[0];
-    a.parentNode.insertBefore(o, a);
-  };
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t;
+    var ttq = w[t] = w[t] || [];
+    ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
+    ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); }; };
+    for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+    ttq.instance = function (t) { var e = ttq._i[t] || []; for (var n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]); return e; };
+    ttq.load = function (e, n) {
+      var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i = ttq._i || {};
+      ttq._i[e] = [];
+      ttq._i[e]._u = i;
+      ttq._t = ttq._t || {};
+      ttq._t[e] = +new Date;
+      ttq._o = ttq._o || {};
+      ttq._o[e] = n || {};
+      var o = document.createElement("script");
+      o.type = "text/javascript";
+      o.async = true;
+      o.src = i + "?sdkid=" + e + "&lib=" + t;
+      var a = document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(o, a);
+    };
 
-  ttq.load('D6653D3C77U5A5SIUUUG');
-  ttq.page();
-  ttq.track('ViewContent');
-}(window, document, 'ttq');
-</script>
-<!-- End TikTok Pixel Code -->
+    ttq.load('D6653D3C77U5A5SIUUUG');
+    ttq.page();
+
+    // wyślij event ukończenia
+    ttq.track('CompleteRegistration');
+
+  }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel Code -->
 
 </head>
 
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 24px;">
-  <h1>Test TikTok Pixel</h1>
-  <p>Jeśli wszystko działa, TikTok Pixel Helper powinien wykryć pixel i event <b>ViewContent</b>.</p>
-  <p>Pixel ID: <code>D6653D3C77U5A5SIUUUG</code></p>
+<body style="font-family: system-ui; padding: 24px;">
+  <h2>Dziękujemy!</h2>
+  <p>Twoja odpowiedź została zapisana. Za chwilę nastąpi przekierowanie…</p>
+
+  <script>
+    // przekierowanie po 2 sekundach (żeby pixel zdążył się wysłać)
+    setTimeout(function() {
+      window.location.href = "https://sites.google.com/view/badaniegraczyippan/strona-główna";
+    }, 2000);
+  </script>
+
 </body>
 </html>
