@@ -35,7 +35,8 @@
     ttq.page();
 
     // wyślij event ukończenia
-    ttq.track('ViewContent');
+    ttq.track('ViewContent', { content_id: 'badanie_end' });
+
 
 
   }(window, document, 'ttq');
