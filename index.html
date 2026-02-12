@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Dziękujemy</title>
+
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track"];
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}; 
+    for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i])}
+    ttq.load('D6653D3C77U5A5SIUUUG');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+
+</head>
+
+<body>
+
+<script>
+(function fire(){
+  if (window.ttq && typeof ttq.track === 'function') {
+    ttq.track('CompleteRegistration');
+
+    setTimeout(function(){
+      window.location.href = "https://sites.google.com/view/badaniegraczyippan/strona-główna";
+    }, 800);
+
+  } else {
+    setTimeout(fire, 200);
+  }
+})();
+</script>
+
+</body>
+</html>
