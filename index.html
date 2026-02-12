@@ -1,10 +1,11 @@
-
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <title>Dziękujemy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test TikTok Pixel</title>
 
+  <!-- TikTok Pixel base code -->
   <script>
   !function (w, d, t) {
     w.TiktokAnalyticsObject=t;
@@ -14,27 +15,14 @@
     for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i])}
     ttq.load('D6653D3C77U5A5SIUUUG');
     ttq.page();
+    ttq.track('ViewContent');
   }(window, document, 'ttq');
   </script>
-
 </head>
 
-<body>
-
-<script>
-(function fire(){
-  if (window.ttq && typeof ttq.track === 'function') {
-    ttq.track('CompleteRegistration');
-
-    setTimeout(function(){
-      window.location.href = "https://sites.google.com/view/badaniegraczyippan/strona-główna";
-    }, 12000);
-
-  } else {
-    setTimeout(fire, 200);
-  }
-})();
-</script>
-
+<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 24px;">
+  <h1>Test TikTok Pixel</h1>
+  <p>Jeśli wszystko działa, TikTok Pixel Helper powinien wykryć pixel i event <b>ViewContent</b>.</p>
+  <p>Pixel ID: <code>D6653D3C77U5A5SIUUUG</code></p>
 </body>
 </html>
